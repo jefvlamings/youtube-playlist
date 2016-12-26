@@ -1,5 +1,5 @@
 /* put this in address bar as bookmarklet
-javascript:(function(){var script = document.createElement("script");script.src="http://www.jefvlamings.com/youtube.js";document.body.appendChild(script);})();
+javascript:(function(){var script = document.createElement("script");script.src="https://jefvlamings.github.io/youtube-playlist/youtube.js";document.body.appendChild(script);})();
 */
 
 
