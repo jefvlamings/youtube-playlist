@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+     <title>Jef Vlamings - Youtube Playlist Bookmarklet</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body>
+	<h1>Youtube Playlist</h1>
+	<h2>Make youtube playlists on the fly</h2>
+	
+	<div id="info">
+		<div class="box">
+			<h3>1. Drag to bookmarks bar</h3>
+			<a id="bookmarklet" href="javascript:(function(){var script = document.createElement('script');script.src='https://jefvlamings.github.io/youtube-playlist/youtube.js';document.body.appendChild(script);})();">Youtube Playlist</a>
+		</div>
+		<div class="box">
+			<h3>2. Go to youtube</h3>
+			<a href="http://www.youtube.com/watch?v=oHg5SJYRHA0"><img id="youtube" src="youtube.png"></img></a>
+		</div>
+		<div class="box">
+			<h3>3. Make playlists</h3>
+			<img src="playlist.png"></img>			
+		</div>
+	</div>
+	<p>Only works in modern Webkit browsers (i.e. Safari or Chrome)</p>
+	
+</body>
+
+</html>
