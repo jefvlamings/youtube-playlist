@@ -19,20 +19,20 @@ var myStorageGet = function(key) {
 var myStorageClear = function() {
     localStorage.clear();
 	titles = myStorageGet("titles");
-	dates = myStorageGet("dates");
+	// dates = myStorageGet("dates");
 	urls = myStorageGet("urls");	  
 	showPlaylist(); 
 };
 
 // retrieve titles, dates and urls from database
 var titles = myStorageGet("titles");
-var dates = myStorageGet("dates");
+// var dates = myStorageGet("dates");
 var urls = myStorageGet("urls");
 
 // retrieve current video information from this page
 var currentVideo = document.getElementById('movie_player');
 var currentTitle = document.getElementById('eow-title').getAttribute('title');
-var currentDate = document.getElementById('eow-date').innerHTML;
+// var currentDate = document.getElementById('eow-date').innerHTML;
 var currentUrl = window.location.href;
 
 currentVideo.addEventListener("onStateChange", "playNextInPlaylist");
@@ -95,7 +95,7 @@ var output = function(){
 	if(titles=== null){
 	
 			titles =[];
-			dates =[];
+			// dates =[];
 			urls =[];
 	};
 	
@@ -132,7 +132,7 @@ var hidePlaylist = function(){
 // Store all arrays in localstorage
 var storeAll = function(){
 	myStorageInsert("titles",titles);
-	myStorageInsert("dates",dates);	
+	// myStorageInsert("dates",dates);	
 	myStorageInsert("urls",urls);	
 };
 
@@ -142,7 +142,7 @@ var addToPlaylist = function(){
 	// if the video is not in the playlist then add title, date and url to arrays
 	if(duplicates(currentTitle,titles)!==true){
 		titles.push(currentTitle);
-		dates.push(currentDate);
+		// dates.push(currentDate);
 		urls.push(currentUrl);
 		
 		storeAll();
@@ -154,7 +154,7 @@ var addToPlaylist = function(){
 // remove video from playlist
 function removeSong(nummer){
 	titles.splice(nummer,1);
-	dates.splice(nummer,1);
+	// dates.splice(nummer,1);
 	urls.splice(nummer,1);
 	
 	storeAll();
@@ -165,8 +165,8 @@ function removeSong(nummer){
 function moveSongUp(nummer){
 	titles.splice (nummer-1, 0, titles[nummer] );	
 	titles.splice(nummer+1,1);	
-	dates.splice (nummer-1, 0, dates[nummer] );		
-	dates.splice(nummer+1,1);
+	// dates.splice (nummer-1, 0, dates[nummer] );		
+	// dates.splice(nummer+1,1);
 	urls.splice (nummer-1, 0, urls[nummer] );		
 	urls.splice(nummer+1,1);
 	storeAll();
@@ -177,8 +177,8 @@ function moveSongUp(nummer){
 function moveSongDown(nummer){
 	titles.splice (nummer+2, 0, titles[nummer] );	
 	titles.splice(nummer,1);	
-	dates.splice (nummer+2, 0, dates[nummer] );		
-	dates.splice(nummer,1);
+	// dates.splice (nummer+2, 0, dates[nummer] );		
+	// dates.splice(nummer,1);
 	urls.splice (nummer+2, 0, urls[nummer] );		
 	urls.splice(nummer,1);
 	storeAll();
